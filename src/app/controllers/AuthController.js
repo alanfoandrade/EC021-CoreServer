@@ -9,7 +9,7 @@ class AuthController {
     });
 
     if (!(await schema.isValid(req.body))) {
-      return res.json({ error: 'Todos campos são obrigatórios' });
+      return res.json({ error: 'Erro de validação, confira os dados' });
     }
 
     const { username } = req.body;

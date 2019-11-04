@@ -16,8 +16,10 @@ class App {
   }
 
   middlewares() {
+    this.server.pre(restify.pre.sanitizePath());
     this.server.use(Sentry.Handlers.requestHandler());
     this.server.use(restify.plugins.jsonBodyParser());
+    this.server.use(restify.plugins.queryParser());
   }
 
   routes() {

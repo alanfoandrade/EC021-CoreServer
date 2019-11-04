@@ -7,9 +7,10 @@ const routes = new Router();
 
 routes.post('/auth/login', AuthController.store);
 
+routes.get('/meme', authMiddleware, MemeController.index);
+routes.get('/meme/:memeid', authMiddleware, MemeController.find);
 routes.post('/meme', authMiddleware, MemeController.store);
 routes.patch('/meme/:memeid', authMiddleware, MemeController.update);
-routes.get('/meme/:memeid?', authMiddleware, MemeController.index);
 routes.del('/meme', authMiddleware, MemeController.delete);
 
 export default routes;

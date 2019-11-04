@@ -7,7 +7,7 @@ export default async (req, res, next) => {
   });
 
   if (!(await schema.isValid(req.headers))) {
-    return res.json({ error: 'Token não informado, faça login novamente' });
+    return res.json({ error: 'Erro de validação, faça login novamente' });
   }
   const { token } = req.headers;
 
