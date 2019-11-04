@@ -1,4 +1,5 @@
 import * as Yup from 'yup';
+
 import MemeSchema from '../models/MemeSchema';
 
 class MemeController {
@@ -7,24 +8,26 @@ class MemeController {
       const memes = await MemeSchema.find();
 
       // eslint-disable-next-line eqeqeq
-      if (memes == '') return res.json({ error: 'Nenhum Meme encontrado' });
+      if (memes == '')
+        return res.send(204, { error: 'Nenhum Meme encontrado' });
 
-      return res.json(memes);
+      return res.send(200, memes);
     } catch (error) {
-      return res.json({ error: 'Erro ao buscar Memes' });
+      return res.send(400, { error: 'Erro ao buscar Memes' });
     }
   }
 
-  async find(req, res) {
+  async show(req, res) {
     try {
       const { memeid } = req.params;
+
       const meme = await MemeSchema.findById(memeid);
 
-      if (!meme) return res.json({ error: 'Meme não encontrado' });
+      if (!meme) return res.send(404, { error: 'Meme não encontrado' });
 
-      return res.json(meme);
+      return res.send(200, meme);
     } catch (error) {
-      return res.json({ error: 'Erro ao buscar Meme' });
+      return res.send(400, { error: 'Erro ao buscar Meme' });
     }
   }
 
@@ -37,31 +40,51 @@ class MemeController {
       });
 
       if (!(await schema.isValid(req.body))) {
-        return res.json({ error: 'Erro de validação, confira os dados' });
+        return res.send(400, { error: 'Erro de validação, confira os dados' });
       }
       const meme = await MemeSchema.create(req.body);
 
-      return res.json(meme);
+      return res.send(201, meme);
     } catch (error) {
-      return res.json({ error: 'Erro ao criar Meme' });
+      return res.send(400, { error: 'Erro ao criar Meme' });
     }
   }
 
   async update(req, res) {
     try {
-      const meme = await MemeSchema.create(req.body);
+      const schema = Yup.object().shape({
+        titulo: Yup.string(),
+        descricao: Yup.string(),
+        ano: Yup.number(),
+      });
 
-      return res.json(meme);
+      if (!(await schema.isValid(req.body))) {
+        return res.send(400, { error: 'Erro de validação, confira os dados' });
+      }
+
+      const meme = await MemeSchema.findByIdAndUpdate(
+        req.params.memeid,
+        {
+          ...req.body,
+        },
+        { new: true }
+      );
+
+      return res.send(200, meme);
     } catch (error) {
-      return res.json({ error: 'Erro ao editar Meme' });
+      return res.send(400, { error: 'Erro ao editar Meme' });
     }
   }
 
   async delete(req, res) {
     try {
-      return res.json({ ok: 'Meme excluído' });
+      const meme = await MemeSchema.findByIdAndRemove(req.body.id);
+
+      if (!meme) return res.send(404, 'Meme não encontrado');
+
+      return res.send(200, { ok: 'Meme excluído' });
     } catch (error) {
-      return res.json({ error: 'Erro ao excluir Meme' });
+      return res.send(400, { error: 'Erro ao excluir Meme' });
     }
   }
 }

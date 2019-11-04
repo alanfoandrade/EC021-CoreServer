@@ -1,4 +1,5 @@
 import * as Yup from 'yup';
+
 import auth from '../../services/auth';
 
 export default async (req, res, next) => {
@@ -7,7 +8,7 @@ export default async (req, res, next) => {
   });
 
   if (!(await schema.isValid(req.headers))) {
-    return res.json({ error: 'Erro de validação, faça login novamente' });
+    return res.send(403, { error: 'Erro de validação, faça login novamente' });
   }
   const { token } = req.headers;
 
@@ -22,6 +23,8 @@ export default async (req, res, next) => {
 
     return next();
   } catch (error) {
-    return res.json(error.response.data.msg);
+    return res.send(403, {
+      error: 'Erro de autenticação, faça login novamente',
+    });
   }
 };

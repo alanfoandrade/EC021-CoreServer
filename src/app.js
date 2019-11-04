@@ -1,8 +1,10 @@
+import 'dotenv/config';
 import * as restify from 'restify';
 
+import cors from 'cors';
 import * as Sentry from '@sentry/node';
-import sentryConfig from './config/sentryConfig';
 
+import sentryConfig from './config/sentryConfig';
 import routes from './routes';
 
 class App {
@@ -20,6 +22,7 @@ class App {
     this.server.use(Sentry.Handlers.requestHandler());
     this.server.use(restify.plugins.jsonBodyParser());
     this.server.use(restify.plugins.queryParser());
+    this.server.use(cors());
   }
 
   routes() {
