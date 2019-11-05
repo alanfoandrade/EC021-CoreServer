@@ -1,5 +1,6 @@
 import * as Yup from 'yup';
 
+// Importa conexao do axios criada em services/auth.js
 import auth from '../../services/auth';
 
 export default async (req, res, next) => {
@@ -7,8 +8,9 @@ export default async (req, res, next) => {
     token: Yup.string().required(),
   });
 
+  // Verifica se existe token no header
   if (!(await schema.isValid(req.headers))) {
-    return res.send(403, { error: 'Erro de validação, faça login novamente' });
+    return res.send(403, { error: 'Token não fornecido' });
   }
   const { token } = req.headers;
 
@@ -19,11 +21,12 @@ export default async (req, res, next) => {
   };
 
   try {
+    // Valida token presente no header, caso seja inválido retorna erro
     await auth.post('/auth/validateToken', null, axiosConfig);
 
     return next();
   } catch (error) {
-    return res.send(403, {
+    return res.send(401, {
       error: 'Erro de autenticação, faça login novamente',
     });
   }
