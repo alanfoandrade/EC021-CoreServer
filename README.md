@@ -21,7 +21,7 @@
 
 ## Dev-Dependencies
 
-- Sucrase: Alternativa "super-fast" ao Babel, responsável por fazer a transpilação do código em módulos do ECMA Script 6 para CommonJS, assegurando compatibilidade com os navegadores mais antigos.
+- Sucrase: Alternativa "super-fast" ao Babel, responsável por fazer a transpilação do código em módulos do ECMA Script 6 para CommonJS, assegurando compatibilidade com o NODE.js.
 
 - Nodemon: Ferramenta que monitora e reinicia a aplicação sempre que alguma modificação feita no código for salva.
 
