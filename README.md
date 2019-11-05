@@ -50,7 +50,7 @@
 
 1. Utilizar a rota Login da pasta Auth para autenticar na aplicação
 
-1. As rotas da pasta Memes possibilitam:
+- As rotas da pasta Memes possibilitam:
     1. Fazer a Criação de novos Memes.
     1. Editar meme pelo Id passado via query.
     1. Listar todos Memes criados.
