@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-- Restify: Framework web service para Node.js utilizado para desenvolver a aplicação RESTful de forma fácilmente escalável.
+- Restify: Framework web service para Node.js utilizado para desenvolver a aplicação RESTful de forma facilmente escalável.
 
 - Restify-router: Facilita a definição e organização de múltiplas rotas em arquivos separados.
 
