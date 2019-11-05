@@ -6,7 +6,7 @@
 
 - Restify-router: Facilita a definição e organização de múltiplas rotas em arquivos separados.
 
-- Mongoose: Ferramenta de modelagem para o MongoDB, utilizada para estabeler a comunicação e gerenciar as requisições ao banco.
+- Mongoose: Ferramenta de modelagem para o MongoDB, utilizada para estabeler a comunicação e gerenciar as requisições ao banco de dados.
 
 - Axios: Cliente HTTP utilizado para estabelecer a comunicação e gerenciar as requisições ao servidor de autenticação.
 
@@ -21,15 +21,15 @@
 
 ## Dev-Dependencies
 
-- Sucrase: Alternativa "super-fast" ao Babel, responsável por fazer a transpilação do código em módulos do ECMA Script 6 para CommonJS, que tem melhor compatibilidade com os navegadores mais antigos.
+- Sucrase: Alternativa "super-fast" ao Babel, responsável por fazer a transpilação do código em módulos do ECMA Script 6 para CommonJS, assegurando compatibilidade com os navegadores mais antigos.
 
-- Nodemon: Ferramenta que monitora e reinicia a aplicação sempre que alguma modificação feita for salva.
+- Nodemon: Ferramenta que monitora e reinicia a aplicação sempre que alguma modificação feita no código for salva.
 
 - As bibliotecas a seguir foram utilizadas para manter a adronização da formatação do código, seguindo as regras do ES6 e style guide da airbnb.
     - Prettier: Formatação do código, configurações adicionais ao eslint.
     - Eslint: Padronização do código seguindo a style guide a seguir.
     - Eslint-config-airbnb-base: Style guide popular utilizada para padronização do código
-    - Eslint-config-prettier: Configurações do prettier
+    - Eslint-config-prettier: Integração das configurações do prettier ao eslint
     - Eslint-plugin-import: Dependência do eslint
     - Eslint-plugin-prettier: Integração do plugin do prettier ao eslint
 
@@ -50,7 +50,7 @@
 
 1. Utilizar a rota Login da pasta Auth para autenticar na aplicação
 
-- As rotas da pasta Memes possibilitam:
+- As rotas da pasta Memes possibilitam (Necessário estar logado):
     1. Fazer a Criação de novos Memes.
     1. Editar meme pelo Id passado via query.
     1. Listar todos Memes criados.
