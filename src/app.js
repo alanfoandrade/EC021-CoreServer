@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import * as restify from 'restify';
+import restify from 'restify';
 
 import cors from 'cors';
 import * as Sentry from '@sentry/node';

@@ -17,8 +17,7 @@ class AuthController {
     const { username } = req.body;
     let { password } = req.body;
 
-    // Converte password para String caso tenha sido fornecido no formato de number
-    // Para adequar ao formato configurado no banco de dados
+    // Converte password para String caso tenha sido fornecido number
     password = String(password);
 
     try {
