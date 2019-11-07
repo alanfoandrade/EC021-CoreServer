@@ -25,7 +25,7 @@
 
 - Nodemon: Ferramenta que monitora e reinicia a aplicação sempre que alguma modificação feita no código for salva.
 
-- As bibliotecas a seguir foram utilizadas para manter a adronização da formatação do código, seguindo as regras do ES6 e style guide da airbnb.
+- As bibliotecas a seguir foram utilizadas para manter a padronização da formatação do código, seguindo as regras do ES6 e style guide da airbnb.
     - Prettier: Formatação do código, configurações adicionais ao eslint.
     - Eslint: Padronização do código seguindo a style guide a seguir.
     - Eslint-config-airbnb-base: Style guide popular utilizada para padronização do código
