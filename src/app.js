@@ -36,7 +36,6 @@ class App {
   routes() {
     // Importação das rotas de autenticacao
     authRoutes.applyRoutes(this.server);
-
     // Importação das rotas de meme
     memeRoutes.applyRoutes(this.server);
 

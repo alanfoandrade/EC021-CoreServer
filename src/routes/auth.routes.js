@@ -2,9 +2,9 @@ import { Router } from 'restify-router';
 
 import AuthController from '../app/controllers/AuthController';
 
-const routes = new Router();
+const authRoutes = new Router();
 
 // Rotas sem autenticação
-routes.post('/auth/login', AuthController.store);
+authRoutes.post('/auth/login', AuthController.store);
 
-export default routes;
+export default authRoutes;
