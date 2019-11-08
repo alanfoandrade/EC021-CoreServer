@@ -8,7 +8,6 @@ class MemeController {
       // Lista todos Memes cadastrados, dispara erro caso falhe
       const memes = await MemeSchema.find();
 
-      // eslint-disable-next-line eqeqeq
       if (memes.length === 0)
         return res.send(400, { error: 'Nenhum Meme encontrado' });
 

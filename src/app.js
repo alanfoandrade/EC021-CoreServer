@@ -5,7 +5,8 @@ import cors from 'cors';
 import * as Sentry from '@sentry/node';
 
 import sentryConfig from './config/sentryConfig';
-import routes from './routes';
+import authRoutes from './routes/auth.routes';
+import memeRoutes from './routes/meme.routes';
 
 class App {
   constructor() {
@@ -33,8 +34,11 @@ class App {
   }
 
   routes() {
-    // Importação das rotas do arquivo routes.js
-    routes.applyRoutes(this.server);
+    // Importação das rotas de autenticacao
+    authRoutes.applyRoutes(this.server);
+
+    // Importação das rotas de meme
+    memeRoutes.applyRoutes(this.server);
 
     // Captura de erros
     this.server.use(Sentry.Handlers.errorHandler());
