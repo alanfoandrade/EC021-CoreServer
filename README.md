@@ -46,7 +46,7 @@
 
 ### Utilizando o Insomnia
 
-1. Importar a workspace do arquivo Insomnia_Workspace.json da pasta raíz do projeto
+1. Importar a workspace do arquivo Insomnia_Workspace.json da pasta ./public/tests
 
 1. Utilizar a rota Login da pasta Auth, da workspace do Insomnia, para autenticar na aplicação
 
