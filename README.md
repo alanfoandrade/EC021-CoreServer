@@ -46,14 +46,14 @@
 
 ### Utilizando o Insomnia
 
-1. Importar a workspace do arquivo Insomnia_Workspace.json na pasta raíz do projeto
+1. Importar a workspace do arquivo Insomnia_Workspace.json da pasta raíz do projeto
 
-1. Utilizar a rota Login da pasta Auth para autenticar na aplicação
+1. Utilizar a rota Login da pasta Auth, da workspace do Insomnia, para autenticar na aplicação
 
-- As rotas da pasta Memes possibilitam (Necessário estar logado):
+- As rotas da pasta Memes, da workspace do Insomnia, possibilitam (necessário estar logado):
     1. Fazer a Criação de novos Memes.
-    1. Editar meme pelo Id passado via query.
     1. Listar todos Memes criados.
-    1. Exibir um determinado meme pelo Id passado via query.
+    1. Exibir um determinado Meme pelo Id passado via query.
+    1. Editar Meme pelo Id passado via query.
     1. Excluir Meme pelo Id passado via body.
 
