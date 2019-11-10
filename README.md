@@ -48,27 +48,33 @@
 
 1. Importar a workspace do arquivo Insomnia_Workspace.json da pasta ./public/tests
   
-  -> baseUrl servidor local para todas as rotas: http://localhost:3000
+  >[!IMPORTANT]
+  >baseUrl servidor local para todas as rotas: http://localhost:3000
 1. Utilizar a rota Login da pasta Auth, da workspace do Insomnia, para autenticar na aplicação
     post: baseUrl/auth/login
     Request body:
+    ```json
     {
        "username": "<username>",
        "password": "<password>"
     }
+    ```
 
 
-- As rotas da pasta Memes, da workspace do Insomnia, possibilitam (necessário estar logado):
+As rotas da pasta Memes, da workspace do Insomnia, possibilitam as seguintes funcionalidades (necessário estar logado):
 
-  -> Request Header das próximas rotas: {token:{token_value}}    
+  >[!IMPORTANT]
+  >Request Header das próximas rotas: {token:{token_value}}    
     1. Fazer a Criação de novos Memes.
         post: baseUrl/meme
         Request body:
+        ```json
         {
            "titulo": "<titulo>",
            "descricao": "<descricao>",
            "ano": <ano>
         }
+        ```
 
     1. Listar todos Memes criados.
         get: baseUrl/meme
@@ -77,15 +83,19 @@
     1. Editar Meme pelo Id passado via query.
         patch: baseUrl/meme/<meme-id>
         Request body:
+        ```json
         {
            "titulo": "<novo-titulo>",
            "descricao": "<nova-descricao>",
            "ano": <novo-ano>
         }
+        ```
     1. Excluir Meme pelo Id passado via body.
         del: baseUrl/meme
         Request body:
+        ```json
         {
            "id": <meme_id>
         }
+        ```
 
