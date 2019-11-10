@@ -30,7 +30,11 @@
     - **Eslint-config-airbnb-base**: Style guide popular utilizada para padronização do código
     - **Eslint-config-prettier**: Integração das configurações do prettier ao eslint
     - **Eslint-plugin-import**: Dependência do eslint
+<<<<<<< HEAD
     - **Eslint-plugin-prettier**: Integração do plugin do prettier ao eslint
+=======
+    - **Eslint-plugin-prettier**: Integração do plugin do prettier ao eslint    
+>>>>>>> bd81db8b078d47e2bb94018c73358f01c74d760f
 
 ## Como Configurar e Executar
 
@@ -46,6 +50,7 @@
 ### Utilizando o Insomnia
 
 1. Importar a workspace do arquivo `Insomnia_Workspace.json` da pasta `./public/tests`
+<<<<<<< HEAD
 
     > **baseUrl** do servidor local para todas as rotas: `http://localhost:3000`
 
@@ -53,6 +58,15 @@
 
     **POST**: `baseUrl/auth/login`
 
+=======
+  
+    > **baseUrl** do servidor local para todas as rotas: `http://localhost:3000`    
+   
+1. Utilizar a rota **Login**, da pasta *Auth* da workspace do Insomnia, para autenticar na aplicação
+
+    **POST**: `baseUrl/auth/login`
+    
+>>>>>>> bd81db8b078d47e2bb94018c73358f01c74d760f
     **Request body**:
     ```json
     {
@@ -63,8 +77,13 @@
 
 - As rotas da pasta *Memes* da workspace do Insomnia, possibilitam as seguintes funcionalidades (necessário estar logado):
 
+<<<<<<< HEAD
     > **Request Header** das próximas rotas: `{token:{token_value}}`
 
+=======
+    > **Request Header** das próximas rotas: `{token:{token_value}}`    
+  
+>>>>>>> bd81db8b078d47e2bb94018c73358f01c74d760f
   1. Fazer a Criação de novos Memes.
 
       **POST**: `baseUrl/meme`
@@ -76,6 +95,7 @@
          "descricao": "<descricao>",
          "ano": "<ano>"
       }
+<<<<<<< HEAD
       ```
 
   1. Listar todos Memes criados.
@@ -86,6 +106,18 @@
 
       **GET**: `baseUrl/meme/<meme-id>`
 
+=======
+      ```      
+
+  1. Listar todos Memes criados.
+
+      **GET**: `baseUrl/meme`      
+      
+  1. Exibir um determinado Meme pelo Id passado via query.
+
+      **GET**: `baseUrl/meme/<meme-id>`      
+      
+>>>>>>> bd81db8b078d47e2bb94018c73358f01c74d760f
   1. Editar Meme pelo Id passado via query.
 
       **PATCH**: `baseUrl/meme/<meme-id>`
@@ -97,8 +129,13 @@
          "descricao": "<nova-descricao>",
          "ano": "<novo-ano>"
       }
+<<<<<<< HEAD
       ```
 
+=======
+      ```      
+      
+>>>>>>> bd81db8b078d47e2bb94018c73358f01c74d760f
   1. Excluir Meme pelo Id passado via body.
 
       **DELETE**: `baseUrl/meme`
