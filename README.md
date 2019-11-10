@@ -49,7 +49,9 @@
 1. Importar a workspace do arquivo Insomnia_Workspace.json da pasta ./public/tests
   
   > [!IMPORTANT]
-  > baseUrl servidor local para todas as rotas: http://localhost:3000
+> baseUrl servidor local para todas as rotas: http://localhost:3000
+  
+   
 1. Utilizar a rota Login da pasta Auth, da workspace do Insomnia, para autenticar na aplicação
     post: baseUrl/auth/login
     Request body:
