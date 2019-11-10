@@ -32,6 +32,7 @@
     - **Eslint-config-prettier**: Integração das configurações do prettier ao eslint
     - **Eslint-plugin-import**: Dependência do eslint
     - **Eslint-plugin-prettier**: Integração do plugin do prettier ao eslint
+    
 
 ## Como Configurar e Executar
 
@@ -44,11 +45,13 @@
 
 1. `yarn start`
 
+
 ### Utilizando o Insomnia
 
 1. Importar a workspace do arquivo `Insomnia_Workspace.json` da pasta `./public/tests`
   
     > **baseUrl** do servidor local para todas as rotas: `http://localhost:3000`
+    
    
 1. Utilizar a rota **Login**, da pasta *Auth* da workspace do Insomnia, para autenticar na aplicação
 
@@ -66,6 +69,7 @@
 - As rotas da pasta *Memes* da workspace do Insomnia, possibilitam as seguintes funcionalidades (necessário estar logado):
 
     > **Request Header** das próximas rotas: `{token:{token_value}}`
+    
   
   1. Fazer a Criação de novos Memes.
 
@@ -79,14 +83,17 @@
          "ano": "<ano>"
       }
       ```
+      
 
   1. Listar todos Memes criados.
 
       **GET**: `baseUrl/meme`
       
+      
   1. Exibir um determinado Meme pelo Id passado via query.
 
       **GET**: `baseUrl/meme/<meme-id>`
+      
       
   1. Editar Meme pelo Id passado via query.
 
@@ -100,6 +107,7 @@
          "ano": "<novo-ano>"
       }
       ```
+      
       
   1. Excluir Meme pelo Id passado via body.
 
