@@ -83,9 +83,11 @@
   1. Listar todos Memes criados.
 
       **GET**: `baseUrl/meme`
+      
   1. Exibir um determinado Meme pelo Id passado via query.
 
       **GET**: `baseUrl/meme/<meme-id>`
+      
   1. Editar Meme pelo Id passado via query.
 
       **PATCH**: `baseUrl/meme/<meme-id>`
@@ -98,6 +100,7 @@
          "ano": "<novo-ano>"
       }
       ```
+      
   1. Excluir Meme pelo Id passado via body.
 
       **DELETE**: `baseUrl/meme`
@@ -108,4 +111,3 @@
          "id": "<meme_id>"
       }
       ```
-
