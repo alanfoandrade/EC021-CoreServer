@@ -7,6 +7,7 @@ const memeRoutes = new Router();
 
 // Rotas com autenticação
 memeRoutes.use(authMiddleware);
+
 // Lista todos os memes cadastrados
 memeRoutes.get('/meme', MemeController.index);
 // Exibe meme por id via params

@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/server.js",
-    "dev": "nodemon --inspect src/server.js"
+    "start": "node -r sucrase/register src/server.js",
+    "dev": "nodemon src/server.js",
+    "debug": "nodemon --inspect src/server.js"
   },
   "dependencies": {
     "@sentry/node": "5.7.1",
