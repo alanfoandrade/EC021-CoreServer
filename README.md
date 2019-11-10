@@ -65,7 +65,7 @@
 
     > **Request Header** das próximas rotas: `{token:{token_value}}`
 
-  1. Fazer a Criação de novos Memes.
+  1. **Cadastrar** Memes.
 
       **POST**: `baseUrl/meme`
 
@@ -78,15 +78,15 @@
       }
       ```
 
-  1. Listar todos Memes criados.
+  1. **Listar** todos Memes cadastrados.
 
       **GET**: `baseUrl/meme`
 
-  1. Exibir um determinado Meme pelo Id passado via query.
+  1. **Exibir** um determinado Meme pelo Id passado via query.
 
       **GET**: `baseUrl/meme/<meme-id>`
 
-  1. Editar Meme pelo Id passado via query.
+  1. **Editar** Meme pelo Id passado via query.
 
       **PATCH**: `baseUrl/meme/<meme-id>`
 
@@ -99,7 +99,7 @@
       }
       ```
 
-  1. Excluir Meme pelo Id passado via body.
+  1. **Excluir** Meme pelo Id passado via body.
 
       **DELETE**: `baseUrl/meme`
 
