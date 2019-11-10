@@ -48,7 +48,7 @@
 
 1. Importar a workspace do arquivo `Insomnia_Workspace.json` da pasta `./public/tests`
   
-  > **baseUrl** do servidor local para todas as rotas: `http://localhost:3000`
+    > **baseUrl** do servidor local para todas as rotas: `http://localhost:3000`
    
 1. Utilizar a rota **Login**, da pasta *Auth* da workspace do Insomnia, para autenticar na aplicação
 
@@ -100,7 +100,7 @@
       ```
   1. Excluir Meme pelo Id passado via body.
   
-      **DEL**: `baseUrl/meme`
+      **DELETE**: `baseUrl/meme`
 
       **Request body**:
       ```json
