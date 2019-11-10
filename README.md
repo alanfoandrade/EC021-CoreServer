@@ -5,7 +5,7 @@ Considerando a arquitetura já existente na infraestrutura do projeto, tem-se um
 
 O objetivo do projeto é implementar um servidor de aplicação (Core Server) que irá reaproveitar as funcionalidades de gerenciamento de usuários do servidor de autenticação e, garantindo que o usuário está logado, expor um CRUD para gerenciar os memes do sistema.
 
-## Dependencies
+## Dependências
 
 - **Restify**: Framework web service para Node.js utilizado para desenvolver a aplicação RESTful de forma facilmente escalável.
 
@@ -23,7 +23,7 @@ O objetivo do projeto é implementar um servidor de aplicação (Core Server) qu
 
 - **Dotenv**: Armazenar variáveis de ambiente.
 
-## Dev-Dependencies
+## Dependências de desenvolvimento
 
 - **Sucrase**: Alternativa "super-fast" ao Babel, responsável por fazer a transpilação do código em módulos do ECMA Script 6 para CommonJS, assegurando compatibilidade com o NODE.js.
 
