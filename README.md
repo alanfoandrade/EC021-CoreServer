@@ -1,9 +1,9 @@
 # EC021-CoreServer
 Serviço desenvolvido como projeto prático da disciplina de Sistemas Distribuídos, do décimo período do curso de Engenharia da Computação do INATEL. 
 
-Considerando a arquitetura já existente na infraestrutura do projeto, tem-se um servidor de autenticação (Auth Server) que concentra todas as funcionalidades de Login e verificação do token de autenticação (JWT), este servidor é acessado por vários outros sistemas e API’s para realizar autenticação dos usuários de forma centralizada. Há também um servidor de banco de dados remoto que armazena as informações de todos os usuários e armazenará as informações de todos os memes. 
+Considerando a arquitetura já existente na infraestrutura do projeto, tem-se um servidor de autenticação (Auth Server) que concentra todas as funcionalidades de Login e verificação do token de autenticação (JWT), este servidor é acessado por vários outros sistemas e API’s para realizar autenticação dos usuários de forma centralizada. Há também um servidor de banco de dados remoto que armazena as informações de todos os usuários e armazena as informações de todos os memes. 
 
-O objetivo do projeto é implementar um servidor de aplicação (Core Server) que irá reaproveitar as funcionalidades de gerenciamento de usuários do servidor de autenticação e, garantindo que o usuário está logado, expor um CRUD para gerenciar os memes do sistema.
+Foi implementado um servidor de aplicação (Core Server) que reaproveita as funcionalidades de gerenciamento de usuários do servidor de autenticação e, garantindo que o usuário está logado, expõe um CRUD para gerenciamento dos memes do sistema.
 
 ## Dependências
 
