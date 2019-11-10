@@ -76,7 +76,7 @@ As rotas da pasta Memes, da workspace do Insomnia, possibilitam as seguintes fun
       {
          "titulo": "<titulo>",
          "descricao": "<descricao>",
-         "ano": <ano>
+         "ano": "<ano>"
       }
       ```
 
@@ -95,7 +95,7 @@ As rotas da pasta Memes, da workspace do Insomnia, possibilitam as seguintes fun
       {
          "titulo": "<novo-titulo>",
          "descricao": "<nova-descricao>",
-         "ano": <novo-ano>
+         "ano": "<novo-ano>"
       }
       ```
   1. Excluir Meme pelo Id passado via body.
@@ -105,7 +105,7 @@ As rotas da pasta Memes, da workspace do Insomnia, possibilitam as seguintes fun
       Request body:
       ```json
       {
-         "id": <meme_id>
+         "id": "<meme_id>"
       }
       ```
 
