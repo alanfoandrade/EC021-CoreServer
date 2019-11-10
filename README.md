@@ -84,18 +84,18 @@
 
     1. **Exibir** um determinado Meme pelo Id passado via query.
 
-        **GET**: `baseUrl/meme/<meme-id>`
+        **GET**: `baseUrl/meme/<meme_id>`
 
     1. **Editar** Meme pelo Id passado via query.
 
-        **PATCH**: `baseUrl/meme/<meme-id>`
+        **PATCH**: `baseUrl/meme/<meme_id>`
 
         **Request body**:
         ```json
         {
-           "titulo": "<novo-titulo>",
-           "descricao": "<nova-descricao>",
-           "ano": "<novo-ano>"
+           "titulo": "<novo_titulo>",
+           "descricao": "<nova_descricao>",
+           "ano": "<novo_ano>"
         }
         ```
 
