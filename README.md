@@ -87,7 +87,7 @@
 
       **GET**: `baseUrl/meme/<meme-id>`
   1. Editar Meme pelo Id passado via query.
-  
+
       **PATCH**: `baseUrl/meme/<meme-id>`
 
       **Request body**:
@@ -99,7 +99,7 @@
       }
       ```
   1. Excluir Meme pelo Id passado via body.
-  
+
       **DELETE**: `baseUrl/meme`
 
       **Request body**:
