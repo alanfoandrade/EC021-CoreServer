@@ -61,7 +61,7 @@
     }
     ```
 
-- As rotas da pasta *Memes* da workspace do Insomnia, possibilitam as seguintes funcionalidades (necessário estar logado):
+1. Através das rotas da pasta *Memes* da workspace do Insomnia, estão disponíveis as seguintes funcionalidades (necessário estar logado):
 
     > **Request Header** das próximas rotas: `{token:{token_value}}`
 
