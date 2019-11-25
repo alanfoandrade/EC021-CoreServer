@@ -10,7 +10,7 @@ export default async (req, res, next) => {
 
   // Verifica se existe token no header
   if (!(await schema.isValid(req.headers))) {
-    return res.send(403, { error: 'Token não fornecido' });
+    return res.send(403, { Error: 'Token não fornecido' });
   }
   const { token } = req.headers;
 
@@ -26,8 +26,10 @@ export default async (req, res, next) => {
 
     return next();
   } catch (error) {
-    return res.send(401, {
-      error: 'Erro de autenticação, faça login novamente',
-    });
+    const message =
+      error.message !== ''
+        ? error.message
+        : 'Erro de autenticação, faça login novamente';
+    return res.send(401, { Error: message });
   }
 };

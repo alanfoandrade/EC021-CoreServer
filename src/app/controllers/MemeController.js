@@ -9,11 +9,11 @@ class MemeController {
       const memes = await MemeSchema.find();
 
       if (memes.length === 0)
-        return res.send(400, { error: 'Nenhum Meme encontrado' });
+        return res.send(400, { Error: 'Nenhum Meme encontrado' });
 
       return res.send(200, memes);
     } catch (error) {
-      return res.send(400, { error: 'Erro ao buscar Memes' });
+      return res.send(400, { Error: 'Erro ao buscar Memes' });
     }
   }
 
@@ -24,11 +24,11 @@ class MemeController {
 
       const meme = await MemeSchema.findById(memeid);
 
-      if (!meme) return res.send(404, { error: 'Meme não encontrado' });
+      if (!meme) return res.send(404, { Error: 'Meme não encontrado' });
 
       return res.send(200, meme);
     } catch (error) {
-      return res.send(400, { error: 'Erro ao buscar Meme' });
+      return res.send(400, { Error: 'Erro ao buscar Meme' });
     }
   }
 
@@ -42,14 +42,14 @@ class MemeController {
 
       // Valida se os dados são válidos e se foram preenchidos
       if (!(await schema.isValid(req.body))) {
-        return res.send(400, { error: 'Erro de validação, confira os dados' });
+        return res.send(400, { Error: 'Erro de validação, confira os dados' });
       }
       // Cria novo Meme utilizando o mongoose e buscando todos dados do body, dispara erro se falhar
       const meme = await MemeSchema.create(req.body);
 
       return res.send(201, meme);
     } catch (error) {
-      return res.send(400, { error: 'Erro ao criar Meme' });
+      return res.send(400, { Error: 'Erro ao criar Meme' });
     }
   }
 
@@ -63,7 +63,7 @@ class MemeController {
 
       // Valida se os dados são válidos e se foram preenchidos
       if (!(await schema.isValid(req.body))) {
-        return res.send(400, { error: 'Erro de validação, confira os dados' });
+        return res.send(400, { Error: 'Erro de validação, confira os dados' });
       }
 
       // Busca por id e atualiza Meme utilizando o mongoose e buscando dados do body, dispara erro se falhar
@@ -75,11 +75,11 @@ class MemeController {
         { new: true }
       );
 
-      if (!meme) return res.send(404, { error: 'Meme não encontrado' });
+      if (!meme) return res.send(404, { Error: 'Meme não encontrado' });
 
       return res.send(200, meme);
     } catch (error) {
-      return res.send(400, { error: 'Erro ao editar Meme' });
+      return res.send(400, { Error: 'Erro ao editar Meme' });
     }
   }
 
@@ -88,11 +88,11 @@ class MemeController {
       // Busca meme por id e remove, dispara erro se falhar
       const meme = await MemeSchema.findByIdAndRemove(req.body.id);
 
-      if (!meme) return res.send(404, { error: 'Meme não encontrado' });
+      if (!meme) return res.send(404, { Error: 'Meme não encontrado' });
 
       return res.send(204);
     } catch (error) {
-      return res.send(400, { error: 'Erro ao excluir Meme' });
+      return res.send(400, { Error: 'Erro ao excluir Meme' });
     }
   }
 }

@@ -11,7 +11,7 @@ class AuthController {
 
     // Valida se os dados são válidos e se foram preenchidos
     if (!(await schema.isValid(req.body))) {
-      return res.send(400, { error: 'Erro de validação, confira os dados' });
+      return res.send(400, { Error: 'Erro de validação, confira os dados' });
     }
 
     const { username } = req.body;
@@ -24,12 +24,11 @@ class AuthController {
       // Acessa a rota de login utilizando a conexão do axios, caso falhe dispara erro
       const { data } = await auth.post('/auth/login', { username, password });
 
-      // Desestruturando dados para retorno
-      const { logado, token } = data;
-
-      return res.send(200, { username, logado, token });
+      return res.send(200, data);
     } catch (error) {
-      return res.send(401, { error: 'Falha na autenticação' });
+      const message =
+        error.message !== '' ? error.message : 'Falha na autenticação';
+      return res.send(401, { Error: message });
     }
   }
 }

@@ -27,8 +27,6 @@ class App {
     this.server.use(Sentry.Handlers.requestHandler());
     // Configura o restify para aceitar JSON
     this.server.use(restify.plugins.jsonBodyParser());
-    // Configura o restify para ler os params
-    this.server.use(restify.plugins.queryParser());
     // Possibilita o acesso de outra API
     this.server.use(cors());
   }
